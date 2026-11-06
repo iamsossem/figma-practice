@@ -1,0 +1,136 @@
+.mobile-search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-32);
+  width: 100%;
+}
+
+.mobile-search-results__body,
+.mobile-search-results__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+  width: 100%;
+}
+
+/* 조건 패널은 데스크탑에서만 보인다. 그보다 작은 화면은 조건 버튼으로 별도 화면을 연다. */
+.mobile-search-results__filter-panel {
+  display: none;
+}
+
+.mobile-search-results__search-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+.mobile-search-results__search-result-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  color: var(--color-gray-900);
+}
+
+.mobile-search-results__title,
+.mobile-search-results__filter-label {
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  color: var(--color-gray-900);
+}
+
+.mobile-search-results__subtitle {
+  font-size: var(--text-hero);
+  font-weight: var(--type-hero-font-weight);
+  line-height: var(--type-hero-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: inherit;
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 gray-200 대신 gray-300을 쓴다. */
+.mobile-search-results__search-result-count {
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+  color: var(--color-gray-300);
+}
+
+.mobile-search-results__filter {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-80);
+  height: var(--spacing-80);
+  color: var(--color-primary-700);
+}
+
+.mobile-search-results__filter .icon {
+  width: var(--spacing-60);
+  height: var(--spacing-49);
+}
+
+.mobile-search-results__recommended-books-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-53);
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+/* 태블릿: 시안이 없어 데스크탑 와이어프레임을 참고해 정한 배치 (PRD 7.4) */
+@media (min-width: 768px) {
+  .mobile-search-results__body {
+    max-width: var(--layout-max-width);
+    margin-inline: auto;
+    padding-inline: var(--layout-gutter);
+    padding-bottom: var(--spacing-32);
+  }
+
+  .mobile-search-results__search-result-header,
+  .mobile-search-results__recommended-books-list {
+    padding-inline: 0;
+  }
+
+  .mobile-search-results__recommended-books-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--spacing-32) var(--spacing-24);
+  }
+
+  .mobile-search-results__recommended-books-list .searched-book-card-mobile__cover-image {
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+/* 데스크탑: 왼쪽에 조건 패널을 고정하고 조건 버튼은 숨긴다. */
+@media (min-width: 1440px) {
+  .mobile-search-results__body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .mobile-search-results__filter-panel {
+    display: block;
+    flex-shrink: 0;
+    width: var(--filter-panel-width);
+  }
+
+  .mobile-search-results__content {
+    flex: 1 0 0;
+    min-width: 0;
+  }
+
+  .mobile-search-results__filter {
+    display: none;
+  }
+}

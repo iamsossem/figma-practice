@@ -1,0 +1,39 @@
+.book-reservation-confirm-info__curator-note {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+  width: 100%;
+  padding: var(--spacing-16);
+  border-radius: var(--base-radius);
+  background-color: var(--color-primary-50);
+  color: var(--color-primary-800);
+}
+
+/* Figma의 44 크기 책 아이콘은 NoteIcon을 그대로 줄인 모양이다. */
+.book-reservation-confirm-info__curator-note .icon {
+  width: var(--width-icon);
+  height: var(--width-icon);
+}
+
+.book-reservation-confirm-info__curator-note-frame {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  min-width: 0;
+}
+
+.book-reservation-confirm-info__curator-note-title {
+  font-size: var(--text-h1);
+  font-weight: var(--type-h1-font-weight);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
+  color: inherit;
+}
+
+.book-reservation-confirm-info__curator-note-description {
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+}

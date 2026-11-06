@@ -1,0 +1,15 @@
+.step-status {
+  flex-shrink: 0;
+  width: var(--spacing-50);
+  height: var(--spacing-10);
+  border-radius: var(--base-radius);
+}
+
+.step-status--active {
+  background-color: var(--color-primary-600);
+  border: var(--border-width-base) solid var(--color-primary-900);
+}
+
+.step-status--waiting {
+  background-color: var(--color-primary-200);
+}

@@ -1,0 +1,11 @@
+.popup-menu-list {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+  width: 100%;
+}
+
+.popup-menu-list__button {
+  flex: 1 0 0;
+  min-width: 0;
+}

@@ -1,0 +1,20 @@
+/* 선이 없을 때도 같은 두께의 투명한 선을 두어, 클릭해도 크기가 변하지 않게 한다. */
+.book-list-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4) var(--spacing-16)
+    calc(var(--spacing-4) - var(--border-width-base));
+  border-bottom: var(--border-width-base) solid transparent;
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+  color: var(--color-primary-900);
+  text-shadow: var(--button-shadow);
+  white-space: nowrap;
+}
+
+.book-list-title--clicked {
+  border-bottom-color: var(--color-primary-800);
+}

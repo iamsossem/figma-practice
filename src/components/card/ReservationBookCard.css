@@ -1,0 +1,85 @@
+.reservation-book-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+.reservation-book-card__cover-image {
+  flex-shrink: 0;
+  width: var(--spacing-100);
+  height: var(--spacing-100);
+  border-radius: var(--base-radius);
+  background-color: var(--color-image-placeholder);
+}
+
+.reservation-book-card__cover-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.reservation-book-card__right-book-info {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-self: stretch;
+  gap: var(--spacing-8);
+  min-width: 0;
+  padding-block: var(--spacing-4);
+}
+
+.reservation-book-card__book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-4);
+  width: 100%;
+}
+
+.reservation-book-card__category {
+  font-size: var(--text-small);
+  font-weight: var(--type-small-font-weight);
+  line-height: var(--type-small-line-height);
+  letter-spacing: var(--type-small-letter-spacing);
+  color: var(--color-primary-900);
+}
+
+.reservation-book-card__title {
+  font-size: var(--text-h3);
+  font-weight: var(--type-h3-font-weight);
+  line-height: var(--type-h3-line-height);
+  letter-spacing: var(--type-h3-letter-spacing);
+  color: var(--color-primary-900);
+}
+
+/* Figma의 자간 0에 맞는 토큰을 고른다. */
+.reservation-book-card__author {
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-small-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: var(--color-primary-400);
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 secondary-500 대신 secondary-700을 쓴다. */
+.reservation-book-card__holding-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  color: var(--color-secondary-700);
+  white-space: pre;
+}
+
+/* ◎은 Pretendard에 없어 글꼴에 따라 모양이 달라지므로 Figma와 같은 크기의 SVG로 그린다. */
+.reservation-book-card__holding-mark {
+  flex-shrink: 0;
+  width: var(--spacing-14);
+  height: var(--spacing-14);
+}

@@ -1,0 +1,283 @@
+.mobile-main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-32);
+  width: 100%;
+}
+
+/* Figma 메인 화면의 TopMenu만 높이 80 안에서 아이콘이 8 아래로 내려가 있다. */
+.mobile-main-page .top-menu {
+  height: var(--spacing-80);
+  padding-top: var(--spacing-32);
+}
+
+.mobile-main-page__body-text {
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+}
+
+.mobile-main-page__hero-text,
+.mobile-main-page__hero-welcome-message {
+  font-size: var(--text-hero);
+  font-weight: var(--type-hero-font-weight);
+  line-height: var(--type-hero-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: inherit;
+}
+
+.mobile-main-page__hero-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-main-page__hero-banner {
+  position: relative;
+  width: 100%;
+  height: var(--hero-banner-height);
+  margin-bottom: var(--spacing-n100);
+}
+
+.mobile-main-page__hero-banner > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-main-page__hero-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-image-overlay);
+}
+
+.mobile-main-page__hero-quick-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-main-page__hero-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+  width: calc(100% - var(--spacing-32));
+  padding: var(--spacing-32);
+  border-radius: var(--base-radius);
+  background-color: var(--color-primary-50);
+}
+
+.mobile-main-page__quick-menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-16);
+  width: 100%;
+  padding: var(--spacing-16);
+}
+
+.mobile-main-page__quick-menu .main-category {
+  height: var(--spacing-160);
+}
+
+.mobile-main-page__search-input-form {
+  position: absolute;
+  top: var(--spacing-14);
+  left: 0;
+  padding-inline: var(--spacing-16);
+}
+
+.mobile-main-page__recommended-books-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-32);
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+.mobile-main-page__recommended-books-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.mobile-main-page__recommended-books-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-53);
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+.mobile-main-page__library-course {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-32);
+  width: 100%;
+}
+
+.mobile-main-page__library-info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-32);
+  width: 100%;
+  padding: var(--spacing-64) var(--spacing-16);
+}
+
+.mobile-main-page__button-list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+  width: 100%;
+}
+
+.mobile-main-page__button {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.mobile-main-page__course-section {
+  position: relative;
+  width: 100%;
+  height: var(--course-section-height);
+}
+
+.mobile-main-page__course-image {
+  position: absolute;
+  top: var(--spacing-12);
+  right: var(--spacing-17);
+  left: var(--spacing-75);
+  height: var(--course-image-height);
+  overflow: clip;
+  border-radius: var(--base-radius);
+}
+
+.mobile-main-page__course-image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-main-page__course-info {
+  position: absolute;
+  top: var(--course-info-top);
+  right: var(--spacing-51);
+  left: var(--spacing-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-27);
+  padding: var(--spacing-32);
+  border-radius: var(--base-radius);
+  background-color: var(--color-primary-100);
+  box-shadow: var(--button-shadow);
+  color: var(--color-gray-900);
+}
+
+.mobile-main-page__course-description {
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+}
+
+.mobile-main-page__footer-text {
+  width: 100%;
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-32);
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+}
+
+/* 태블릿: 시안이 없어 데스크탑 와이어프레임을 참고해 정한 배치 (PRD 7.4) */
+@media (min-width: 768px) {
+  .mobile-main-page__hero-quick-menu,
+  .mobile-main-page__recommended-books-heading,
+  .mobile-main-page__recommended-books-list,
+  .mobile-main-page__library-course,
+  .mobile-main-page__footer-text {
+    max-width: var(--layout-max-width);
+    padding-inline: var(--layout-gutter);
+  }
+
+  .mobile-main-page__search-input-form {
+    top: var(--spacing-32);
+    right: 0;
+    max-width: var(--search-form-max-width);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .mobile-main-page__hero-quick-menu {
+    align-items: stretch;
+    gap: var(--spacing-16);
+  }
+
+  .mobile-main-page__hero-headline {
+    width: 100%;
+  }
+
+  .mobile-main-page__quick-menu {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0;
+  }
+
+  .mobile-main-page__recommended-books-heading {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .mobile-main-page__recommended-books-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--spacing-24);
+  }
+
+  .mobile-main-page__recommended-books-list .searched-book-card-mobile__cover-image {
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .mobile-main-page__library-course {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+  }
+
+  .mobile-main-page__library-info-section {
+    padding-inline: 0;
+  }
+
+  .mobile-main-page__footer-text {
+    text-align: center;
+  }
+}
+
+/* 데스크탑: 환영 문구와 퀵메뉴를 좌우로 놓는다. 글자가 커져 퀵메뉴는 2열로 둔다. */
+@media (min-width: 1440px) {
+  .mobile-main-page__hero-quick-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-main-page__quick-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mobile-main-page__quick-menu .main-category {
+    height: 100%;
+    min-height: var(--spacing-160);
+  }
+}

@@ -1,0 +1,25 @@
+import './Icon.css'
+
+/**
+ * Figma close (노드 166:1516)
+ * 크기는 Icon.css에서 정하고, 색은 currentColor라 바깥 CSS의 color를 따른다.
+ */
+function Close({ className = '', ...rest }) {
+  return (
+    <svg
+      className={`icon ${className}`.trim()}
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      {...rest}
+    >
+      <path
+        d="M24 3C12.3 3 3 12.3 3 24C3 35.7 12.3 45 24 45C35.7 45 45 35.7 45 24C45 12.3 35.7 3 24 3ZM32.1 34.5L24 26.4L15.9 34.5L13.5 32.1L21.6 24L13.5 15.9L15.9 13.5L24 21.6L32.1 13.5L34.5 15.9L26.4 24L34.5 32.1L32.1 34.5Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+}
+
+export default Close

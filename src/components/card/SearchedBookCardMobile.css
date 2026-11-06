@@ -1,0 +1,83 @@
+.searched-book-card-mobile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-16);
+  width: 100%;
+}
+
+.searched-book-card-mobile__book-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+.searched-book-card-mobile__cover-image {
+  width: 100%;
+  height: var(--spacing-334);
+  border-radius: var(--base-radius);
+  box-shadow: var(--button-shadow);
+}
+
+.searched-book-card-mobile__cover-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.searched-book-card-mobile__book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-4);
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+.searched-book-card-mobile__category {
+  font-size: var(--text-small);
+  font-weight: var(--type-small-font-weight);
+  line-height: var(--type-small-line-height);
+  letter-spacing: var(--type-small-letter-spacing);
+  color: var(--color-primary-900);
+}
+
+.searched-book-card-mobile__title {
+  font-size: var(--text-h3);
+  font-weight: var(--type-h3-font-weight);
+  line-height: var(--type-h3-line-height);
+  letter-spacing: var(--type-h3-letter-spacing);
+  color: var(--color-primary-900);
+}
+
+/* Figma의 자간 0에 맞는 토큰을 고른다. */
+.searched-book-card-mobile__author {
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--type-small-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: var(--color-primary-400);
+}
+
+.searched-book-card-mobile__button-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-30);
+  width: 100%;
+}
+
+.searched-book-card-mobile__button {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+/* Figma는 카드 왼쪽 기준으로 배치하지만, 폭이 달라져도 오른쪽에 붙도록 오른쪽 기준으로 둔다. */
+.searched-book-card-mobile__loan-status-button {
+  position: absolute;
+  top: var(--spacing-14);
+  right: var(--spacing-16);
+}

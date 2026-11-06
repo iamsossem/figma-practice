@@ -1,0 +1,68 @@
+.book-search-input-form {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+/* 테두리 두께만큼 안쪽 여백을 줄여 Figma처럼 테두리가 크기에 영향을 주지 않게 한다. */
+.book-search-input-form__book-search-input {
+  flex: 1 0 0;
+  min-width: 0;
+  padding: calc(var(--spacing-16) - var(--border-width-base));
+  border: var(--border-width-base) solid var(--color-primary-500);
+  border-radius: var(--base-radius);
+  background-color: var(--color-white);
+  box-shadow: var(--button-shadow);
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  color: var(--color-primary-900);
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 primary-300 대신 primary-400을 쓴다. */
+.book-search-input-form__book-search-input::placeholder {
+  color: var(--color-primary-400);
+  opacity: 1;
+}
+
+.book-search-input-form__search-icon-wrapper {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.book-search-input-form__speak-icon,
+.book-search-input-form__search-icon {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: var(--base-radius);
+}
+
+/* 보이는 크기는 Figma의 40px로 두고, 눌리는 영역만 사방 2px씩 넓혀 터치 타겟 44px을 맞춘다. */
+.book-search-input-form__speak-icon::after,
+.book-search-input-form__search-icon::after {
+  content: '';
+  position: absolute;
+  inset: calc(var(--spacing-2) - var(--spacing-4));
+}
+
+/* SVG에 그림자 여백이 있어 틀보다 크다. Figma처럼 가운데에 놓고 넘친 부분은 자른다. */
+.book-search-input-form__icon-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-40);
+  height: var(--spacing-40);
+  overflow: clip;
+  border-radius: inherit;
+  background-color: var(--color-white);
+  color: var(--color-primary-700);
+}
+
+.book-search-input-form__icon-frame > svg {
+  flex-shrink: 0;
+  max-width: none;
+}

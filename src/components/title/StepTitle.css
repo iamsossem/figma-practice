@@ -1,0 +1,12 @@
+/* Figma의 글자 24px, 굵기 600, 자간 0에 맞는 토큰을 각각 골라 쓴다. */
+.step-title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-size: var(--text-h1);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: var(--color-primary-900);
+  white-space: nowrap;
+}

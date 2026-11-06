@@ -1,0 +1,12 @@
+.reservation-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.reservation-steps__step-indicator {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}

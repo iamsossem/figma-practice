@@ -1,0 +1,118 @@
+.search-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-32);
+  width: 100%;
+  padding: var(--spacing-16);
+}
+
+.search-filter__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  width: 100%;
+}
+
+.search-filter__group-title {
+  font-size: var(--text-h1);
+  font-weight: var(--type-h1-font-weight);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
+  color: var(--color-primary-700);
+}
+
+.search-filter__buttons {
+  display: grid;
+  gap: var(--spacing-16);
+  width: 100%;
+}
+
+.search-filter__buttons--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.search-filter__buttons--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.search-filter__publication-year-display {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  width: 100%;
+}
+
+.search-filter__year-bar {
+  width: 100%;
+  overflow: clip;
+  background-color: var(--color-primary-400);
+}
+
+.search-filter__year-bar-fill {
+  width: var(--spacing-304);
+  max-width: 100%;
+  height: var(--spacing-13);
+  background-color: var(--color-primary-800);
+}
+
+.search-filter__date-range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  white-space: nowrap;
+}
+
+.search-filter__date-range-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.search-filter__date-range-label--end {
+  align-items: flex-end;
+}
+
+.search-filter__date-label {
+  font-size: var(--text-small);
+  font-weight: var(--type-small-font-weight);
+}
+
+/* 태블릿 이상에서 조건 화면을 가운데에 놓는다. 시안이 없어 정한 배치 (PRD 7.4) */
+@media (min-width: 768px) {
+  .search-filter {
+    max-width: var(--popup-max-width);
+    margin-inline: auto;
+  }
+}
+
+/*
+ * 데스크탑 검색 결과 옆의 패널. 선택된 버튼의 연한 배경이 구별되도록 패널 배경은 흰색으로 둔다.
+ * 글자가 커져 3열에 들어가지 않으므로 버튼을 2열로 놓는다.
+ */
+.search-filter--panel {
+  max-width: none;
+  border: var(--border-width-base) solid var(--color-primary-200);
+  border-radius: var(--base-radius);
+}
+
+.search-filter--panel .search-filter__buttons--three {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.search-filter__panel-title {
+  font-size: var(--text-h1);
+  font-weight: var(--type-h1-font-weight);
+  line-height: var(--type-h1-line-height);
+  letter-spacing: var(--type-h1-letter-spacing);
+  color: var(--color-primary-800);
+}
+
+.search-filter__panel-button {
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+/* 도서예약 세 화면이 함께 쓰는 틀 */
+.book-reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-28);
+  width: 100%;
+  padding: var(--spacing-16);
+}
+
+/* 모바일에서는 묶음 없이 한 줄로 쌓이도록 두 영역의 상자를 없앤다. */
+.book-reservation__summary,
+.book-reservation__detail {
+  display: contents;
+}
+
+/* 태블릿: 가운데 한 열. 시안이 없어 정한 배치 (PRD 7.4) */
+@media (min-width: 768px) {
+  .book-reservation {
+    max-width: var(--popup-max-width);
+    margin-inline: auto;
+  }
+}
+
+/* 데스크탑: 데스크탑 와이어프레임처럼 왼쪽에 요약, 오른쪽에 내용을 놓는다. */
+@media (min-width: 1440px) {
+  .book-reservation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: var(--spacing-32) var(--spacing-64);
+    max-width: var(--layout-max-width);
+    padding: var(--spacing-32) var(--layout-gutter);
+  }
+
+  .book-reservation > .popup-title {
+    grid-column: 1 / -1;
+  }
+
+  .book-reservation__summary,
+  .book-reservation__detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-28);
+  }
+}

@@ -1,0 +1,19 @@
+.popup-title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
+.popup-title__close {
+  flex-shrink: 0;
+  color: var(--color-primary-700);
+}
+
+.popup-title__title {
+  font-size: var(--text-hero);
+  font-weight: var(--type-hero-font-weight);
+  line-height: var(--type-hero-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: var(--color-primary-800);
+  white-space: nowrap;
+}

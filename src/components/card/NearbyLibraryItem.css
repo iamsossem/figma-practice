@@ -1,0 +1,114 @@
+/*
+ * Figma의 테두리는 안쪽에 그려져 두께가 달라도 크기가 같다.
+ * CSS에서도 같도록 테두리 두께만큼 여백과 배지 위치를 줄인다.
+ */
+.nearby-library-item {
+  --nearby-library-item-border: var(--border-width-base);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+  width: 100%;
+  padding: calc(var(--spacing-16) - var(--nearby-library-item-border));
+  overflow: clip;
+  border: var(--nearby-library-item-border) solid var(--color-primary-900);
+  border-radius: var(--base-radius);
+  text-align: left;
+}
+
+.nearby-library-item--selected {
+  --nearby-library-item-border: var(--border-width-selected);
+}
+
+/*
+ * Figma는 0.5px 테두리에 투명도 60%를 쓰지만, 그러면 글자 대비가 4.5:1보다 낮아지고
+ * 일반 화면에서 0.5px가 1px로 그려져 높이가 달라진다.
+ * 그래서 대비를 통과하는 색으로 흐리게 표현하고, 테두리는 연한 색의 기본 두께로 둔다.
+ */
+.nearby-library-item--closed {
+  border-color: var(--color-primary-200);
+}
+
+.nearby-library-item--closed .nearby-library-item__library-name,
+.nearby-library-item--closed .nearby-library-item__remaining-count {
+  color: var(--color-primary-400);
+}
+
+.nearby-library-item__nearby-library-content {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+  min-width: 0;
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+}
+
+/* Figma의 글자 20px, 굵기 600, 자간 0에 맞는 토큰을 각각 골라 쓴다. */
+.nearby-library-item__library-name {
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  color: var(--color-primary-900);
+  white-space: nowrap;
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 primary-300 대신 primary-400을 쓴다. */
+.nearby-library-item__location {
+  width: 100%;
+  font-size: var(--text-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-400);
+}
+
+.nearby-library-item__open-status-and-remaining {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 secondary-500 대신 secondary-700을 쓴다. */
+.nearby-library-item__open-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: var(--text-small);
+  font-weight: var(--type-body-font-weight);
+  color: var(--color-secondary-700);
+  white-space: pre;
+}
+
+.nearby-library-item--closed .nearby-library-item__open-status {
+  color: var(--color-semantic-error);
+}
+
+.nearby-library-item__remaining-count {
+  font-size: var(--text-small);
+  font-weight: var(--type-h3-font-weight);
+  color: var(--color-primary-900);
+  white-space: nowrap;
+}
+
+.nearby-library-item__favorite-library {
+  position: absolute;
+  top: calc(var(--spacing-40) - var(--nearby-library-item-border));
+  right: calc(var(--spacing-16) - var(--nearby-library-item-border));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-badge);
+  background-color: var(--color-primary-600);
+  font-size: var(--text-small);
+  font-weight: var(--type-h3-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  color: var(--color-primary-50);
+  white-space: nowrap;
+}
+
+.nearby-library-item--closed .nearby-library-item__favorite-library {
+  background-color: var(--color-primary-400);
+}

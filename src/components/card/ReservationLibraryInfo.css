@@ -1,0 +1,38 @@
+.reservation-library-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  width: 100%;
+  padding: var(--spacing-16);
+  border-radius: var(--base-radius);
+  background-color: var(--color-primary-50);
+}
+
+.reservation-library-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-8);
+}
+
+.reservation-library-info--stacked .reservation-library-info__item {
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+/* 명도 대비 4.5:1을 위해 Figma의 primary-300 대신 primary-400을 쓴다. */
+.reservation-library-info__label {
+  flex-shrink: 0;
+  font-size: var(--text-body);
+  font-weight: var(--type-body-font-weight);
+  line-height: var(--type-body-line-height);
+  letter-spacing: var(--type-body-letter-spacing);
+  color: var(--color-primary-400);
+}
+
+.reservation-library-info__value {
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+  color: var(--color-primary-900);
+}

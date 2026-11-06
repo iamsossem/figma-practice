@@ -1,0 +1,78 @@
+/* 공통: 테두리 두께만큼 안쪽 여백을 줄여 Figma처럼 테두리 유무와 관계없이 크기를 같게 한다. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  padding: calc(var(--spacing-10) - var(--border-width-base))
+    calc(var(--spacing-16) - var(--border-width-base));
+  border: var(--border-width-base) solid transparent;
+  border-radius: var(--base-radius);
+  font-family: var(--font-family-pretendard);
+  font-size: var(--text-h2);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-h2-letter-spacing);
+  white-space: nowrap;
+}
+
+.button__icon {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.button__icon > svg {
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+}
+
+/* primary: 기본 / 호버 / 눌림 */
+.button--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary-600);
+  box-shadow: var(--button-shadow);
+}
+
+.button--primary .button__icon {
+  color: var(--color-primary-200);
+}
+
+/* 터치 화면에서 누른 뒤 호버 색이 남지 않도록 마우스 환경에만 적용한다. */
+@media (hover: hover) {
+  /* 명도 대비 4.5:1을 위해 Figma의 primary-300, primary-200 대신 primary-400을 쓴다. */
+  .button--primary:hover {
+    background-color: var(--color-primary-400);
+  }
+
+  .button--primary:hover .button__icon {
+    color: var(--color-primary-50);
+  }
+}
+
+.button--primary:active {
+  background-color: var(--color-primary-700);
+}
+
+.button--primary:active .button__icon {
+  color: var(--color-primary-200);
+}
+
+/* cancel: 취소. 명도 대비 4.5:1을 위해 Figma의 primary-50 대신 primary-700 글자를 쓴다. */
+.button--cancel {
+  color: var(--color-primary-700);
+  background-color: var(--color-primary-200);
+}
+
+/* select: 선택안됨 / 선택. 명도 대비 4.5:1을 위해 Figma의 primary-200 대신 primary-400을 쓴다. */
+.button--select {
+  color: var(--color-primary-400);
+  background-color: transparent;
+  border-color: var(--color-primary-400);
+}
+
+.button--select.button--selected {
+  color: var(--color-primary-600);
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-600);
+  box-shadow: var(--button-shadow);
+}

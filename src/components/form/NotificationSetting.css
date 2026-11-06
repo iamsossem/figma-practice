@@ -1,0 +1,30 @@
+.notification-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--spacing-16);
+}
+
+/* Figma의 글자 24px, 굵기 600, 자간 0에 맞는 토큰을 각각 골라 쓴다. */
+.notification-setting__label {
+  font-size: var(--text-h1);
+  font-weight: var(--type-h2-font-weight);
+  line-height: var(--type-h2-line-height);
+  letter-spacing: var(--type-hero-letter-spacing);
+  white-space: nowrap;
+}
+
+.notification-setting__icon {
+  flex-shrink: 0;
+  width: var(--spacing-48);
+  height: var(--spacing-48);
+}
+
+.notification-setting--enabled {
+  color: var(--color-primary-800);
+}
+
+.notification-setting--disabled {
+  color: var(--color-primary-200);
+}
