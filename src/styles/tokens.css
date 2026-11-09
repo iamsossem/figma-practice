@@ -50,6 +50,24 @@
   --color-image-placeholder: #888888; /* Figma 변수 미정의, 반복 값 */
   --color-image-overlay: rgb(0 0 0 / 0.3); /* Figma 변수 미정의, 히어로 배너 */
 
+  /* 컬러: 쓰임새별 (Figma Color 컬렉션 light 모드) */
+  --color-text-default: var(--color-primary-900);
+  --color-text-heading: var(--color-primary-800);
+  --color-text-subtle: var(--color-primary-400);
+  --color-text-on-primary: var(--color-white);
+  --color-icon-default: var(--color-primary-700);
+  --color-bg-page: var(--color-white);
+  --color-bg-surface: var(--color-primary-50);
+  --color-bg-primary: var(--color-primary-600);
+  --color-bg-primary-pressed: var(--color-primary-700);
+  --color-bg-muted: var(--color-primary-200);
+  --color-border-default: var(--color-primary-900);
+  --color-border-subtle: var(--color-primary-200);
+  --color-status-success: var(--color-secondary-500);
+  --color-status-warning: var(--color-secondary-700);
+  --color-status-error: var(--color-semantic-error);
+  --color-status-info: var(--color-primary-400);
+
   /* 폰트: 패밀리 */
   --font-family-pretendard: 'Pretendard', sans-serif;
 
@@ -70,13 +88,13 @@
   --type-small-font-weight: 300;
   --font-weight-medium: 500; /* Figma 스타일 미정의, 반복 값 */
 
-  /* 폰트: 행간 (Figma Auto) */
-  --type-hero-line-height: normal;
-  --type-h1-line-height: normal;
-  --type-h2-line-height: normal;
-  --type-h3-line-height: normal;
-  --type-body-line-height: normal;
-  --type-small-line-height: normal;
+  /* 폰트: 행간 (Figma LINE-HEIGHT-* 변수) */
+  --type-hero-line-height: 2.375rem; /* 38 */
+  --type-h1-line-height: 1.8125rem; /* 29 */
+  --type-h2-line-height: 1.5rem; /* 24 */
+  --type-h3-line-height: 1.3125rem; /* 21 */
+  --type-body-line-height: 1.1875rem; /* 19 */
+  --type-small-line-height: 1.1875rem; /* 19 */
 
   /* 폰트: 자간 (Figma %를 100으로 나눈 em 값) */
   --type-hero-letter-spacing: 0; /* 0% */
@@ -148,6 +166,41 @@
   --border-width-base: 1px;
   --border-width-selected: 3px; /* Figma 변수 미정의 */
   --device-width: 25.125rem; /* 402 */
+
+  /* 컴포넌트 치수 (Figma 변수) */
+  --size-touch-min: 2.75rem; /* 44 */
+  --height-button: 2.75rem; /* 44 */
+  --padding-button-y: 0.625rem; /* 10 */
+  --padding-button-x: 1rem; /* 16 */
+  --size-icon-box: 3rem; /* 48 */
+  --height-top-menu: 5rem; /* 80 */
+  --height-search-input: 3.1875rem; /* 51 */
+  --width-step-bar: 3.125rem; /* 50 */
+  --height-step-bar: 0.625rem; /* 10 */
+}
+
+/*
+ * 다크 모드 (Figma Color 컬렉션 dark 모드, 초안)
+ * 화면에서 검증하지 않은 초안이라 자동으로 켜지지 않는다.
+ * <html data-theme="dark">처럼 속성을 직접 붙였을 때만 적용된다.
+ */
+[data-theme='dark'] {
+  --color-text-default: var(--color-primary-50);
+  --color-text-heading: var(--color-primary-50);
+  --color-text-subtle: var(--color-primary-200);
+  --color-text-on-primary: var(--color-white);
+  --color-icon-default: var(--color-primary-100);
+  --color-bg-page: var(--color-gray-900);
+  --color-bg-surface: var(--color-gray-800);
+  --color-bg-primary: var(--color-primary-400);
+  --color-bg-primary-pressed: var(--color-primary-500);
+  --color-bg-muted: var(--color-gray-600);
+  --color-border-default: var(--color-primary-100);
+  --color-border-subtle: var(--color-gray-500);
+  --color-status-success: var(--color-secondary-300);
+  --color-status-warning: var(--color-secondary-100);
+  --color-status-error: var(--color-semantic-error);
+  --color-status-info: var(--color-primary-200);
 }
 
 /* 태블릿 */
@@ -170,6 +223,12 @@
     --text-h3: 1.375rem; /* 22 */
     --text-body: 1.25rem; /* 20 */
     --text-small: 1.25rem; /* 20 */
+    --type-hero-line-height: 3.5625rem; /* 57 */
+    --type-h1-line-height: 2.375rem; /* 38 */
+    --type-h2-line-height: 2.0625rem; /* 33 */
+    --type-h3-line-height: 1.625rem; /* 26 */
+    --type-body-line-height: 1.5rem; /* 24 */
+    --type-small-line-height: 1.5rem; /* 24 */
     --width-icon: 3.25rem; /* 52 */
     --device-width: 90rem; /* 1440 */
     --layout-gutter: 4rem; /* 64 */

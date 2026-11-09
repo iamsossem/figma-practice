@@ -13,22 +13,22 @@ import './BookReservationSelectLibrary.css'
 
 const libraries = [
   {
-    libraryName: '별마당 도서관',
-    location: '1.2km 서울특별시 강남구',
+    libraryName: '선경도서관',
+    location: '1.2km 수원시 팔달구',
     openStatus: '운영 중  10:00 ~ 22:00',
     remainingCount: '잔여 3권',
     isFavorite: true,
   },
   {
-    libraryName: '지혜의 숲',
-    location: '5.8km 경기도 파주시',
+    libraryName: '북수원도서관',
+    location: '5.8km 수원시 장안구',
     openStatus: '운영 중  10:00 ~ 20:00',
     remainingCount: '잔여 5권',
     isFavorite: false,
   },
   {
-    libraryName: '청운 문학 도서관',
-    location: '3.2km 서울특별시 종로구',
+    libraryName: '영통도서관',
+    location: '3.2km 수원시 영통구',
     remainingCount: '잔여 1권',
     isFavorite: false,
     isClosed: true,

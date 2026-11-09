@@ -10,7 +10,7 @@
 .notification-setting__label {
   font-size: var(--text-h1);
   font-weight: var(--type-h2-font-weight);
-  line-height: var(--type-h2-line-height);
+  line-height: var(--type-h1-line-height);
   letter-spacing: var(--type-hero-letter-spacing);
   white-space: nowrap;
 }

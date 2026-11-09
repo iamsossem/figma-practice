@@ -11,7 +11,7 @@ import './BookReservation.css'
 import './BookReservationConfirmInfo.css'
 
 const libraryInfo = [
-  { label: '장소', value: '도서관 이름 북부 지점 1F' },
+  { label: '장소', value: '선경도서관' },
   { label: '시간', value: '48시간 이내 수령 가능' },
 ]
 
